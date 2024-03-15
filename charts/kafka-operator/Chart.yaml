@@ -1,0 +1,9 @@
+apiVersion: v2
+appVersion: v3.7.0
+description: The Kakfa Operator for Apache Kafka
+home: https://github.com/nineinfra/kafka-operator
+maintainers:
+- name: nineinfra
+  url: https://github.com/nineinfra
+name: kafka-operator
+version: v0.9.0

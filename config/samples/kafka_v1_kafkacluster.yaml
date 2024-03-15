@@ -1,0 +1,19 @@
+apiVersion: kafka.nineinfra.tech/v1
+kind: KafkaCluster
+metadata:
+  labels:
+    app.kubernetes.io/name: kafkacluster
+    app.kubernetes.io/instance: kafkacluster-sample
+    app.kubernetes.io/part-of: kafka-operator
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/created-by: kafka-operator
+  name: kafkacluster-sample
+spec:
+  # TODO(user): Add fields here
+  version: "v3.7.0"
+  image:
+    repository: "nineinfra/kafka"
+    tag: "v3.7.0"
+    pullPolicy: "IfNotPresent"
+  conf:
+    "zookeeper.connect": "nine-test-nine-zookeeper-0.nine-test-nine-zookeeper.dwh.svc:2181,nine-test-nine-zookeeper-1.nine-test-nine-zookeeper.dwh.svc:2181,nine-test-nine-zookeeper-2.nine-test-nine-zookeeper.dwh.svc:2181"
