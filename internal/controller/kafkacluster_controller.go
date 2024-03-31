@@ -142,7 +142,6 @@ func (r *KafkaClusterReconciler) reconcileHeadlessService(ctx context.Context, c
 		if err != nil {
 			return err
 		}
-		return nil
 	} else if err != nil {
 		return err
 	} else {
@@ -171,7 +170,6 @@ func (r *KafkaClusterReconciler) reconcileService(ctx context.Context, cluster *
 		if err != nil {
 			return err
 		}
-		return nil
 	} else if err != nil {
 		return err
 	} else {
@@ -199,7 +197,6 @@ func (r *KafkaClusterReconciler) reconcileConfigMap(ctx context.Context, cluster
 		if err != nil {
 			return err
 		}
-		return nil
 	} else if err != nil {
 		return err
 	} else {
@@ -227,9 +224,10 @@ func (r *KafkaClusterReconciler) reconcileWorkload(ctx context.Context, cluster 
 		if err != nil {
 			return err
 		}
-		return nil
 	} else if err != nil {
 		return err
+	} else {
+		//Todo
 	}
 	logger.Info("Creating a new KafkaCluster successfully")
 	return nil
